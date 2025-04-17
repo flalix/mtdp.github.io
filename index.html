@@ -6,9 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Flavio Lichtenstein">
-<meta name="dcterms.date" content="2025-04-17">
-<meta name="description" content="The Molecular Target Pipeline is a set of sub-pipelines to analise and discover important modulated genes/proteins given a disease and their cases or subtypes.">
 
 <title>Molecular Target Discovery pipeline (MTDp)</title>
 <style>
@@ -33,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./concepts.html" rel="next">
-<link href="./logo_mtp.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -43,13 +38,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f6ac0e637bf632d5e180ae89e5636e8d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-72a8c69bfa1cd3c1fca18bbd1766b368.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -76,258 +71,155 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Molecular Target Discovery pipeline (MTDp)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Preface</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./concepts.html"> 
+<span class="menu-text">Concepts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./BCA.html"> 
+<span class="menu-text">BCA</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dpc" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">DPC</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-dpc">    
+        <li>
+    <a class="dropdown-item" href="./DPC.html">
+ <span class="dropdown-text">DPC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_models.html">
+ <span class="dropdown-text">Models</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_ensemble.html">
+ <span class="dropdown-text">Ensemble</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_consensus.html">
+ <span class="dropdown-text">Consensus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_semantics.html">
+ <span class="dropdown-text">Semantics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_3Sources.html">
+ <span class="dropdown-text">3 Sources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_CSC.html">
+ <span class="dropdown-text">CSC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_conclusions.html">
+ <span class="dropdown-text">Conclusions</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./pPMod.html"> 
+<span class="menu-text">pPMod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./molecular_targets.html"> 
+<span class="menu-text">Mol.Targets</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./summary.html"> 
+<span class="menu-text">Summary</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="./logo_mtp.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Molecular Target Discovery pipeline (MTDp)</a> 
-        <div class="sidebar-tools-main">
-    <a href="https://github.com/flalix/mtdp.github.io/tree/master/book/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
-    <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-              <i class="bi bi-twitter pe-1"></i>
-            Twitter
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=|url|">
-              <i class="bi bi-facebook pe-1"></i>
-            Facebook
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-              <i class="bi bi-linkedin pe-1"></i>
-            LinkedIn
-            </a>
-          </li>
-      </ul>
-    </div>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Preface</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./concepts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Concepts</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./BCA.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BCA</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./DPC.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">DPC</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dpc_models.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">dpc_models.qmd</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dpc_ensemble.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">dpc_ensemble.qmd</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dpc_consensus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">dpc_consensus.qmd</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dpc_semantics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">dpc_semantics.qmd</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dpc_3Sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">dpc_3Sources.qmd</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dpc_CSC.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">dpc_CSC.qmd</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./dpc_conclusions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">dpc_conclusions.qmd</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pPMod.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">pPMod</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./molecular_targets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">MTP</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
+<!-- main -->
+
+
+
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
-  <ul class="collapse">
-  <li><a href="#who-is-this-for" id="toc-who-is-this-for" class="nav-link" data-scroll-target="#who-is-this-for">Who is this for?</a></li>
-  <li><a href="#why" id="toc-why" class="nav-link" data-scroll-target="#why">Why?</a></li>
-  <li><a href="#limitations" id="toc-limitations" class="nav-link" data-scroll-target="#limitations">Limitations</a>
-  <ul class="collapse">
-  <li><a href="#bioinformatics" id="toc-bioinformatics" class="nav-link" data-scroll-target="#bioinformatics">Bioinformatics</a></li>
-  <li><a href="#development" id="toc-development" class="nav-link" data-scroll-target="#development">Development</a></li>
-  <li><a href="#web-site" id="toc-web-site" class="nav-link" data-scroll-target="#web-site">Web site</a></li>
+  <li><a href="#preface" id="toc-preface">Preface</a>
+  <ul>
+  <li><a href="#who-is-this-for" id="toc-who-is-this-for">Who is this for?</a></li>
+  <li><a href="#why" id="toc-why">Why?</a></li>
+  <li><a href="#limitations" id="toc-limitations">Limitations</a>
+  <ul>
+  <li><a href="#bioinformatics" id="toc-bioinformatics">Bioinformatics</a></li>
+  <li><a href="#development" id="toc-development">Development</a></li>
+  <li><a href="#web-site" id="toc-web-site">Web site</a></li>
   </ul></li>
-  <li><a href="#the-pipeline" id="toc-the-pipeline" class="nav-link" data-scroll-target="#the-pipeline">The pipeline</a></li>
-  <li><a href="#sub-pipelines" id="toc-sub-pipelines" class="nav-link" data-scroll-target="#sub-pipelines">Sub-pipelines</a></li>
-  <li><a href="#code-and-environment" id="toc-code-and-environment" class="nav-link" data-scroll-target="#code-and-environment">Code and environment</a></li>
-  <li><a href="#credit" id="toc-credit" class="nav-link" data-scroll-target="#credit">Credit</a></li>
-  <li><a href="#running-the-code-yourself" id="toc-running-the-code-yourself" class="nav-link" data-scroll-target="#running-the-code-yourself">Running the code yourself</a>
-  <ul class="collapse">
-  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#the-pipeline" id="toc-the-pipeline">The pipeline</a></li>
+  <li><a href="#sub-pipelines" id="toc-sub-pipelines">Sub-pipelines</a></li>
+  <li><a href="#code-and-environment" id="toc-code-and-environment">Code and environment</a></li>
+  <li><a href="#credit" id="toc-credit">Credit</a></li>
+  <li><a href="#running-the-code-yourself" id="toc-running-the-code-yourself">Running the code yourself</a>
+  <ul>
+  <li><a href="#data" id="toc-data">Data</a></li>
   </ul></li>
-  <li><a href="#contributing" id="toc-contributing" class="nav-link" data-scroll-target="#contributing">Contributing</a></li>
+  <li><a href="#contributing" id="toc-contributing">Contributing</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/flalix/mtdp.github.io/edit/master/book/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/flalix/mtdp.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/flalix/mtdp.github.io/blob/master/book/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></nav>
-    </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Molecular Target Discovery pipeline (MTDp)</h1>
-</div>
-
-<div>
-  <div class="description">
-    The Molecular Target Pipeline is a set of sub-pipelines to analise and discover important modulated genes/proteins given a disease and their cases or subtypes.
-  </div>
-</div>
-
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Flavio Lichtenstein </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 17, 2025</p>
-    </div>
-  </div>
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+</nav>
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
 <p>The Molecular Target Discovery Pipeline (MTDp)</p>
 <section id="who-is-this-for" class="level2">
-<h2 class="anchored" data-anchor-id="who-is-this-for">Who is this for?</h2>
+<h2 data-anchor-id="who-is-this-for">Who is this for?</h2>
 <p>MTDp is for labs that utilizaes gene expression omics to find pahtways and targets.</p>
 </section>
 <section id="why" class="level2">
-<h2 class="anchored" data-anchor-id="why">Why?</h2>
+<h2 data-anchor-id="why">Why?</h2>
 </section>
 <section id="limitations" class="level2">
-<h2 class="anchored" data-anchor-id="limitations">Limitations</h2>
+<h2 data-anchor-id="limitations">Limitations</h2>
 <section id="bioinformatics" class="level3">
-<h3 class="anchored" data-anchor-id="bioinformatics">Bioinformatics</h3>
+<h3 data-anchor-id="bioinformatics">Bioinformatics</h3>
 <p>The current version only uses Reactome to calculate the geneset enrichemnt analysis (GSEA)</p>
 <p>DPC uses Gemini models 1.5-pro and 1.5-flash, but will be generalized soon.</p>
 </section>
 <section id="development" class="level3">
-<h3 class="anchored" data-anchor-id="development">Development</h3>
+<h3 data-anchor-id="development">Development</h3>
 <p>The current version was developed and tested in Linux</p>
 </section>
 <section id="web-site" class="level3">
-<h3 class="anchored" data-anchor-id="web-site">Web site</h3>
+<h3 data-anchor-id="web-site">Web site</h3>
 <p>There is no web site for the moment, bioinformatians can download/fork the current version and run it in Jupygter notebook, after configuring its own environement.</p>
 </section>
 </section>
 <section id="the-pipeline" class="level2">
-<h2 class="anchored" data-anchor-id="the-pipeline">The pipeline</h2>
+<h2 data-anchor-id="the-pipeline">The pipeline</h2>
 <p>The Molecular Target Discovery Pipeline comprises on the following sub-pipelines:</p>
 <ol type="1">
 <li>Best Cutoff Algorithm (BCA)<br>
@@ -355,20 +247,20 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 <section id="sub-pipelines" class="level2">
-<h2 class="anchored" data-anchor-id="sub-pipelines">Sub-pipelines</h2>
+<h2 data-anchor-id="sub-pipelines">Sub-pipelines</h2>
 <p>The first algorithm/pipeline is BCA, and it analises if the default cutoff parameters (LFC and FDR for gene expression and FDR for geneset enrichment analysis) are correct and appropiate, offering and Landscape allowing the user to change them; therefore, changing the parameters, DEGs/DAPs changes, following by new enriched pathways.</p>
 <p>The</p>
 </section>
 <section id="code-and-environment" class="level2">
-<h2 class="anchored" data-anchor-id="code-and-environment">Code and environment</h2>
+<h2 data-anchor-id="code-and-environment">Code and environment</h2>
 <p>All code was written in Python 3.11, besides small codes in shell script. The best environment to run is Linux or Linux-like environment.</p>
 </section>
 <section id="credit" class="level2">
-<h2 class="anchored" data-anchor-id="credit">Credit</h2>
+<h2 data-anchor-id="credit">Credit</h2>
 <p>MTP was developed by PhD Flavio Lichtenstein at CENTD - Instituto Butantan - São Paulo, Brazil email: flavio.lichtenstein@butantan.gov.br or flalix@gmail.com</p>
 </section>
 <section id="running-the-code-yourself" class="level2">
-<h2 class="anchored" data-anchor-id="running-the-code-yourself">Running the code yourself</h2>
+<h2 data-anchor-id="running-the-code-yourself">Running the code yourself</h2>
 <p>To run your own data one must:</p>
 <ol type="1">
 <li>Dowload the whole project.</li>
@@ -389,19 +281,19 @@ Tip
 </div>
 </div>
 <section id="data" class="level3">
-<h3 class="anchored" data-anchor-id="data">Data</h3>
+<h3 data-anchor-id="data">Data</h3>
 <p>All presentd data belongs to: 1. COVID-19 - proteomics - PhD Sonia Aparecida de Andrade at Escola Superior, Butantan Institute, São Paulo, SP, Brazil 2. Medullobalstoma - microarray - PhD Aparecida Maria Fontes at Department of Genetics, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto</p>
 </section>
 </section>
 <section id="contributing" class="level2">
-<h2 class="anchored" data-anchor-id="contributing">Contributing</h2>
+<h2 data-anchor-id="contributing">Contributing</h2>
 <p>This book is free and open source, so please do <a href="https://github.com/kevinheavey/modern-polars/issues/new">open an issue</a> if you notice a problem!</p>
 
 
 </section>
 </section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -819,22 +711,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="flalix/mtp" data-repo-id="" data-category="General" data-category-id="" data-mapping="title" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
-</script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark">
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="./concepts.html" class="pagination-link" aria-label="Concepts">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Concepts</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/flalix/mtdp.github.io/edit/master/book/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/flalix/mtdp.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li><li><a href="https://github.com/flalix/mtdp.github.io/blob/master/book/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li></ul></div></div></div></footer></body></html>
+</body></html>

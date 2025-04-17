@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>references</title>
+<title>references – Molecular Target Discovery pipeline (MTDp)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -43,6 +43,7 @@ div.csl-indent {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -56,13 +57,13 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0a183d7a3a4db49aa84f7034bd15c224.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-72a8c69bfa1cd3c1fca18bbd1766b368.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -89,20 +90,108 @@ div.csl-indent {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Molecular Target Discovery pipeline (MTDp)</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Preface</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./concepts.html"> 
+<span class="menu-text">Concepts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./BCA.html"> 
+<span class="menu-text">BCA</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-dpc" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">DPC</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-dpc">    
+        <li>
+    <a class="dropdown-item" href="./DPC.html">
+ <span class="dropdown-text">DPC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_models.html">
+ <span class="dropdown-text">Models</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_ensemble.html">
+ <span class="dropdown-text">Ensemble</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_consensus.html">
+ <span class="dropdown-text">Consensus</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_semantics.html">
+ <span class="dropdown-text">Semantics</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_3Sources.html">
+ <span class="dropdown-text">3 Sources</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_CSC.html">
+ <span class="dropdown-text">CSC</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./dpc_conclusions.html">
+ <span class="dropdown-text">Conclusions</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./pPMod.html"> 
+<span class="menu-text">pPMod</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./molecular_targets.html"> 
+<span class="menu-text">Mol.Targets</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./summary.html"> 
+<span class="menu-text">Summary</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-
+<nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#references" id="toc-references">References</a></li>
+  </ul>
+</nav>
 <section id="references" class="level1 unnumbered">
 <h1 class="unnumbered">References</h1>
 <div id="refs" role="list">
@@ -112,7 +201,7 @@ div.csl-indent {
 
 </section>
 
-</main> <!-- /main -->
+
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
