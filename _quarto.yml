@@ -1,0 +1,53 @@
+project:
+  type: book
+  output-dir: _book
+
+
+book:
+  title: "Molecular Target Discovery pipeline (MTDp)"
+  author: "Flavio Lichtenstein"
+  date: 2025/04/17
+  favicon: logo_mtp.png
+  description: The Molecular Target Pipeline is a set of sub-pipelines to analise and discover important modulated genes/proteins given a disease and their cases or subtypes.
+  keyword: DEG, Enrichment Analysis, python, DPC, pathway curation, BCA
+  url: https://github.com/flalix/mtdp.github.io
+  sidebar: 
+    background: "#F5F5F5"
+    logo: logo_mtp.png
+    search: true
+  repo-url: https://github.com/flalix/mtdp.github.io
+  repo-subdir: book
+  repo-branch: master
+  repo-actions: [edit, issue, source]
+  sharing: [twitter, facebook, linkedin]
+  image: mtp-no-background.png
+  comments:
+    giscus:
+      repo: flalix/mtp
+
+
+  chapters:
+    - index.qmd
+    - concepts.qmd
+    - BCA.qmd
+    - part: DPC.qmd
+      chapters:
+        - dpc_models.qmd
+        - dpc_ensemble.qmd
+        - dpc_consensus.qmd
+        - dpc_semantics.qmd
+        - dpc_3Sources.qmd
+        - dpc_CSC.qmd
+        - dpc_conclusions.qmd
+    - pPMod.qmd
+    - molecular_targets.qmd
+    - summary.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+    code-fold: false
+    css: custom.css
+    backgroundcolor: "#F5F5F5"
+

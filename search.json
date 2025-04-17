@@ -1,212 +1,262 @@
 [
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "Summary",
-    "section": "",
-    "text": "Summary\nIn summary, this book has no content whatsoever."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Preface",
+    "title": "Molecular Target Discovery pipeline (MTDp)",
     "section": "",
-    "text": "The Molecular Target Discovery Pipeline (MTDp)\n\n\nMTDp is for labs that utilizaes gene expression omics to find pahtways and targets.\n\n\n\n\n\n\n\n\nThe current version only uses Reactome to calculate the geneset enrichemnt analysis (GSEA)\nDPC uses Gemini models 1.5-pro and 1.5-flash, but will be generalized soon.\n\n\n\nThe current version was developed and tested in Linux\n\n\n\nThere is no web site for the moment, bioinformatians can download/fork the current version and run it in Jupygter notebook, after configuring its own environement.\n\n\n\n\nThe Molecular Target Discovery Pipeline comprises on the following sub-pipelines:\n\nBest Cutoff Algorithm (BCA)\n1.1. scan the LFC-FDR landscape\n1.2. allow the user to chose the ‘best’ parameters\n1.3. recalculates DEGs/DAPs and Enriched Pathways\n\nDigital Pathway Curation (DPC) pipeline\n2.1. The Ensemble model\n2.2. The 3 Sources model\n2.3. Crowdsource-consensus (CSC) & accuracies\n\npseudo-Pathway modulation (pPMod)\n3.1. Calculates the pPM inddex\n3.2. Plot the main pseudo-modulated pathways\n- Pathway Heatmaps\n- Gene/Protein heatmaps\n3.3. Plot the LFC-path\n\nMolecular Target in silico Validation\n4.1. Read & Classify the literature\n4.2. Find the Genes present in the literature\n4.3. Order the Genes\n4.4. Uses cMAP to validate genes and to find Mechanism of Action (MOA)\n\n\n\n\nThe first algorithm/pipeline is BCA, and it analises if the default cutoff parameters (LFC and FDR for gene expression and FDR for geneset enrichment analysis) are correct and appropiate, offering and Landscape allowing the user to change them; therefore, changing the parameters, DEGs/DAPs changes, following by new enriched pathways.\nThe\n\n\n\nAll code was written in Python 3.11, besides small codes in shell script. The best environment to run is Linux or Linux-like environment.\n\n\n\nMTP was developed by PhD Flavio Lichtenstein at CENTD - Instituto Butantan - São Paulo, Brazil email: flavio.lichtenstein@butantan.gov.br or flalix@gmail.com\n\n\n\nTo run your own data one must:\n\nDowload the whole project.\nCreate the enviroment with Conda or similar framework, accordingo to requirments.\nDefine your projec.yml parameters 3.1 define the disease 3.2 define cases / subtypes 3.3 rename accordingly the LFC tables\n\n\n\n\n\n\n\nTip\n\n\n\nSee: configuring your own environment\n\n\n\n\nAll presentd data belongs to: 1. COVID-19 - proteomics - PhD Sonia Aparecida de Andrade at Escola Superior, Butantan Institute, São Paulo, SP, Brazil 2. Medullobalstoma - microarray - PhD Aparecida Maria Fontes at Department of Genetics, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto\n\n\n\n\nThis book is free and open source, so please do open an issue if you notice a problem!"
+    "text": "Preface\nThe Molecular Target Discovery Pipeline (MTDp)",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#who-is-this-for",
     "href": "index.html#who-is-this-for",
-    "title": "Preface",
-    "section": "",
-    "text": "MTDp is for labs that utilizaes gene expression omics to find pahtways and targets."
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Who is this for?",
+    "text": "Who is this for?\nMTDp is for labs that utilizaes gene expression omics to find pahtways and targets.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "index.html#why",
+    "href": "index.html#why",
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Why?",
+    "text": "Why?",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#limitations",
     "href": "index.html#limitations",
-    "title": "Preface",
-    "section": "",
-    "text": "The current version only uses Reactome to calculate the geneset enrichemnt analysis (GSEA)\nDPC uses Gemini models 1.5-pro and 1.5-flash, but will be generalized soon.\n\n\n\nThe current version was developed and tested in Linux\n\n\n\nThere is no web site for the moment, bioinformatians can download/fork the current version and run it in Jupygter notebook, after configuring its own environement."
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Limitations",
+    "text": "Limitations\n\nBioinformatics\nThe current version only uses Reactome to calculate the geneset enrichemnt analysis (GSEA)\nDPC uses Gemini models 1.5-pro and 1.5-flash, but will be generalized soon.\n\n\nDevelopment\nThe current version was developed and tested in Linux\n\n\nWeb site\nThere is no web site for the moment, bioinformatians can download/fork the current version and run it in Jupygter notebook, after configuring its own environement.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#the-pipeline",
     "href": "index.html#the-pipeline",
-    "title": "Preface",
-    "section": "",
-    "text": "The Molecular Target Discovery Pipeline comprises on the following sub-pipelines:\n\nBest Cutoff Algorithm (BCA)\n1.1. scan the LFC-FDR landscape\n1.2. allow the user to chose the ‘best’ parameters\n1.3. recalculates DEGs/DAPs and Enriched Pathways\n\nDigital Pathway Curation (DPC) pipeline\n2.1. The Ensemble model\n2.2. The 3 Sources model\n2.3. Crowdsource-consensus (CSC) & accuracies\n\npseudo-Pathway modulation (pPMod)\n3.1. Calculates the pPM inddex\n3.2. Plot the main pseudo-modulated pathways\n- Pathway Heatmaps\n- Gene/Protein heatmaps\n3.3. Plot the LFC-path\n\nMolecular Target in silico Validation\n4.1. Read & Classify the literature\n4.2. Find the Genes present in the literature\n4.3. Order the Genes\n4.4. Uses cMAP to validate genes and to find Mechanism of Action (MOA)"
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "The pipeline",
+    "text": "The pipeline\nThe Molecular Target Discovery Pipeline comprises on the following sub-pipelines:\n\nBest Cutoff Algorithm (BCA)\n1.1. scan the LFC-FDR landscape\n1.2. allow the user to chose the ‘best’ parameters\n1.3. recalculates DEGs/DAPs and Enriched Pathways\n\nDigital Pathway Curation (DPC) pipeline\n2.1. The Ensemble model\n2.2. The 3 Sources model\n2.3. Crowdsource-consensus (CSC) & accuracies\n\npseudo-Pathway modulation (pPMod)\n3.1. Calculates the pPM inddex\n3.2. Plot the main pseudo-modulated pathways\n- Pathway Heatmaps\n- Gene/Protein heatmaps\n3.3. Plot the LFC-path\n\nMolecular Target in silico Validation\n4.1. Read & Classify the literature\n4.2. Find the Genes present in the literature\n4.3. Order the Genes\n4.4. Uses cMAP to validate genes and to find Mechanism of Action (MOA)",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#sub-pipelines",
     "href": "index.html#sub-pipelines",
-    "title": "Preface",
-    "section": "",
-    "text": "The first algorithm/pipeline is BCA, and it analises if the default cutoff parameters (LFC and FDR for gene expression and FDR for geneset enrichment analysis) are correct and appropiate, offering and Landscape allowing the user to change them; therefore, changing the parameters, DEGs/DAPs changes, following by new enriched pathways.\nThe"
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Sub-pipelines",
+    "text": "Sub-pipelines\nThe first algorithm/pipeline is BCA, and it analises if the default cutoff parameters (LFC and FDR for gene expression and FDR for geneset enrichment analysis) are correct and appropiate, offering and Landscape allowing the user to change them; therefore, changing the parameters, DEGs/DAPs changes, following by new enriched pathways.\nThe",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#code-and-environment",
     "href": "index.html#code-and-environment",
-    "title": "Preface",
-    "section": "",
-    "text": "All code was written in Python 3.11, besides small codes in shell script. The best environment to run is Linux or Linux-like environment."
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Code and environment",
+    "text": "Code and environment\nAll code was written in Python 3.11, besides small codes in shell script. The best environment to run is Linux or Linux-like environment.",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#credit",
     "href": "index.html#credit",
-    "title": "Preface",
-    "section": "",
-    "text": "MTP was developed by PhD Flavio Lichtenstein at CENTD - Instituto Butantan - São Paulo, Brazil email: flavio.lichtenstein@butantan.gov.br or flalix@gmail.com"
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Credit",
+    "text": "Credit\nMTP was developed by PhD Flavio Lichtenstein at CENTD - Instituto Butantan - São Paulo, Brazil email: flavio.lichtenstein@butantan.gov.br or flalix@gmail.com",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#running-the-code-yourself",
     "href": "index.html#running-the-code-yourself",
-    "title": "Preface",
-    "section": "",
-    "text": "To run your own data one must:\n\nDowload the whole project.\nCreate the enviroment with Conda or similar framework, accordingo to requirments.\nDefine your projec.yml parameters 3.1 define the disease 3.2 define cases / subtypes 3.3 rename accordingly the LFC tables\n\n\n\n\n\n\n\nTip\n\n\n\nSee: configuring your own environment\n\n\n\n\nAll presentd data belongs to: 1. COVID-19 - proteomics - PhD Sonia Aparecida de Andrade at Escola Superior, Butantan Institute, São Paulo, SP, Brazil 2. Medullobalstoma - microarray - PhD Aparecida Maria Fontes at Department of Genetics, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto"
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Running the code yourself",
+    "text": "Running the code yourself\nTo run your own data one must:\n\nDowload the whole project.\nCreate the enviroment with Conda or similar framework, accordingo to requirments.\nDefine your projec.yml parameters 3.1 define the disease 3.2 define cases / subtypes 3.3 rename accordingly the LFC tables\n\n\n\n\n\n\n\nTip\n\n\n\nSee: configuring your own environment\n\n\n\nData\nAll presentd data belongs to: 1. COVID-19 - proteomics - PhD Sonia Aparecida de Andrade at Escola Superior, Butantan Institute, São Paulo, SP, Brazil 2. Medullobalstoma - microarray - PhD Aparecida Maria Fontes at Department of Genetics, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
     "objectID": "index.html#contributing",
     "href": "index.html#contributing",
-    "title": "Preface",
-    "section": "",
-    "text": "This book is free and open source, so please do open an issue if you notice a problem!"
+    "title": "Molecular Target Discovery pipeline (MTDp)",
+    "section": "Contributing",
+    "text": "Contributing\nThis book is free and open source, so please do open an issue if you notice a problem!",
+    "crumbs": [
+      "Preface"
+    ]
   },
   {
-    "objectID": "molecular_targets.html",
-    "href": "molecular_targets.html",
-    "title": "MTP",
+    "objectID": "concepts.html",
+    "href": "concepts.html",
+    "title": "1  Concepts",
     "section": "",
-    "text": "The Molecular Target Pipeline (MTP)\n\nEach variable forms a column.\nEach observation forms a row.\nEach type of observational unit forms a table.\n\nAs Dr Wickham notes, this is Codd’s 3rd Normal Form but in statspeak rather than databasespeak.\nThe meaning of “variable” and “observation” depend on what we’re studying, so tidy data is a concept that you mostly learn through experience and ✨vibes✨.\nNow we’ll explore what tidy data looks like for an NBA results dataset.\n\n\nYou can play around with the regressions yourself but we’ll end them here.\n\n\n\nThis was mostly a demonstration of .pivot and .melt, with several different examples of reshaping data in Polars and Pandas."
+    "text": "1.1 How much is too much?\nMany people don’t need to be told why method chaining is nice. Many languages make it easy to write thing.min().abs().str() instead of str(abs(min(thing))).\nBut the Python standard library tends to prefer the ugly way, so if you’ve spent a lot of time doing vanilla Python stuff, you may have become accustomed to writing nasty nested function calls or declaring intermediate variables like min_thing. This is sad because a sensible degree of method chaining can make code a lot easier to read.\nIt’s not always easy for libraries to accommodate method chaining - in fancy terms, to be fluent interfaces. Even Pandas used to be much less fluent: when Modern Pandas was released, methods like assign and pipe were quite recent.\nFortunately Polars is very fluent. The expression API provides a very elegant way to do a bunch of stuff to a dataframe in one fell swoop, and Polars mostly doesn’t mutate dataframes in-place (method chaining with side effects is often a bad idea).\nLet’s see how this looks in practice by cleaning up the flight data we gathered in ?sec-indexing.\n:::\nSome items to note:\nThe above examples have some fairly long method chains that could perhaps be split up. That said, if I saw them in a PR I probably wouldn’t mind. Here’s a chain that’s too long:\nI would argue this code is not hard to follow, but empirically it provokes disgust in people. I think it’s just visually shocking, which is often a hallmark of terrible code. That’s enough reason to avoid doing this. You don’t want folks assuming you’ve lost your mind.\nIn the above example, it would probably be enough to just move those long lists to their own variables. That would make it more obvious that the code is really doing simple, menial things.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Concepts</span>"
+    ]
   },
   {
-    "objectID": "molecular_targets.html#get-the-data",
-    "href": "molecular_targets.html#get-the-data",
-    "title": "MTP",
-    "section": "",
-    "text": "You can play around with the regressions yourself but we’ll end them here."
-  },
-  {
-    "objectID": "molecular_targets.html#summary",
-    "href": "molecular_targets.html#summary",
-    "title": "MTP",
-    "section": "",
-    "text": "This was mostly a demonstration of .pivot and .melt, with several different examples of reshaping data in Polars and Pandas."
+    "objectID": "concepts.html#summary",
+    "href": "concepts.html#summary",
+    "title": "1  Concepts",
+    "section": "1.2 Summary",
+    "text": "1.2 Summary\n\nMethod chaining is great but use it with care.\nThe Polars code looks pretty good here next to Pandas. It’s less clunky and more conducive to fluent programming. I’ve noticed some people are under the impression that you should only use Polars when you need the performance, but I would argue the above examples show that it’s better for small data too.\nIf you want to translate Pandas code to Polars, pay attention to the examples above and the accompanying notes on the API differences.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Concepts</span>"
+    ]
   },
   {
     "objectID": "BCA.html",
     "href": "BCA.html",
-    "title": "BCA",
+    "title": "2  BCA",
     "section": "",
-    "text": "The Best Cutoff Algorithm (BCA)\n\n\nHere are some tips that are almost always a good idea:\n\nUse the lazy API.\nUse Exprs, and don’t use .apply unless you really have to.\nUse the smallest necessary numeric types (so if you have an integer between 0 and 255, use pl.UInt8, not pl.Int64). This will save both time and space.\nUse efficient storage (if you’re dumping stuff in files, Parquet is a good choice).\nUse categoricals for recurring strings (but note that it may not be worth it if there’s not much repetition).\nOnly select the columns you need.\n\n\n\n\n\n\n\nTip\n\n\n\nIf your colleagues are happy with CSVs and can’t be convinced to use something else, tell them that the Modern Polars book says they should feel bad.\n\n\nThese are basically the same rules you’d follow when using Pandas, except for the one about the lazy API. Now for some comparisons between the performance of idiomatic Pandas and Polars.\n\n\n\nHere we’ll clean up a messy dataset, kindly provided by Kaggle user Rachit Toshniwal as a deliberate example of a really crap CSV. Most of the cleanup involves extracting numeric data from awkward strings.\nAlso, the data is too small so I’ve concatenated it to itself 20 times. We’re not doing anything that will care about the duplication. Here’s how the raw table looks:\nFor this exercise we’ll assume we want to make use of all the columns. First some boilerplate where we map out the different data types:\n:::\nThis example isn’t telling you to use Pandas in this specific situation. Once you add in the time spent reading a file, Polars likely wins.\nAnd even here, if you sort by the name col, Polars wins again. It has fast-track algorithms for sorted data.\n\n\n\n\nPolars is really fast. Pandas was already respectably fast and Polars wipes the floor with it.\nYou can still make Polars slow if you do silly things with it, but compared to Pandas it’s easier to do the right thing in the first place.\nPolars works well with NumPy ufuncs.\nThere are still some situations where Pandas can be faster. They are probably not compelling, but we shouldn’t pretend they don’t exist."
+    "text": "2.1 Six fairly obvious performance rules\nThe Best Cutoff Algorithm (BCA)\nHere are some tips that are almost always a good idea:\nThese are basically the same rules you’d follow when using Pandas, except for the one about the lazy API. Now for some comparisons between the performance of idiomatic Pandas and Polars.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>BCA</span>"
+    ]
   },
   {
     "objectID": "BCA.html#six-fairly-obvious-performance-rules",
     "href": "BCA.html#six-fairly-obvious-performance-rules",
-    "title": "BCA",
+    "title": "2  BCA",
     "section": "",
-    "text": "Here are some tips that are almost always a good idea:\n\nUse the lazy API.\nUse Exprs, and don’t use .apply unless you really have to.\nUse the smallest necessary numeric types (so if you have an integer between 0 and 255, use pl.UInt8, not pl.Int64). This will save both time and space.\nUse efficient storage (if you’re dumping stuff in files, Parquet is a good choice).\nUse categoricals for recurring strings (but note that it may not be worth it if there’s not much repetition).\nOnly select the columns you need.\n\n\n\n\n\n\n\nTip\n\n\n\nIf your colleagues are happy with CSVs and can’t be convinced to use something else, tell them that the Modern Polars book says they should feel bad.\n\n\nThese are basically the same rules you’d follow when using Pandas, except for the one about the lazy API. Now for some comparisons between the performance of idiomatic Pandas and Polars."
+    "text": "Use the lazy API.\nUse Exprs, and don’t use .apply unless you really have to.\nUse the smallest necessary numeric types (so if you have an integer between 0 and 255, use pl.UInt8, not pl.Int64). This will save both time and space.\nUse efficient storage (if you’re dumping stuff in files, Parquet is a good choice).\nUse categoricals for recurring strings (but note that it may not be worth it if there’s not much repetition).\nOnly select the columns you need.\n\n\n\n\n\n\n\nTip\n\n\n\nIf your colleagues are happy with CSVs and can’t be convinced to use something else, tell them that the Modern Polars book says they should feel bad.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>BCA</span>"
+    ]
   },
   {
     "objectID": "BCA.html#polars-is-faster-at-the-boring-stuff",
     "href": "BCA.html#polars-is-faster-at-the-boring-stuff",
-    "title": "BCA",
-    "section": "",
-    "text": "Here we’ll clean up a messy dataset, kindly provided by Kaggle user Rachit Toshniwal as a deliberate example of a really crap CSV. Most of the cleanup involves extracting numeric data from awkward strings.\nAlso, the data is too small so I’ve concatenated it to itself 20 times. We’re not doing anything that will care about the duplication. Here’s how the raw table looks:\nFor this exercise we’ll assume we want to make use of all the columns. First some boilerplate where we map out the different data types:\n:::\nThis example isn’t telling you to use Pandas in this specific situation. Once you add in the time spent reading a file, Polars likely wins.\nAnd even here, if you sort by the name col, Polars wins again. It has fast-track algorithms for sorted data."
+    "title": "2  BCA",
+    "section": "2.2 Polars is faster at the boring stuff",
+    "text": "2.2 Polars is faster at the boring stuff\nHere we’ll clean up a messy dataset, kindly provided by Kaggle user Rachit Toshniwal as a deliberate example of a really crap CSV. Most of the cleanup involves extracting numeric data from awkward strings.\nAlso, the data is too small so I’ve concatenated it to itself 20 times. We’re not doing anything that will care about the duplication. Here’s how the raw table looks:\nFor this exercise we’ll assume we want to make use of all the columns. First some boilerplate where we map out the different data types:\n:::\nThis example isn’t telling you to use Pandas in this specific situation. Once you add in the time spent reading a file, Polars likely wins.\nAnd even here, if you sort by the name col, Polars wins again. It has fast-track algorithms for sorted data.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>BCA</span>"
+    ]
   },
   {
     "objectID": "BCA.html#summary",
     "href": "BCA.html#summary",
-    "title": "BCA",
-    "section": "",
-    "text": "Polars is really fast. Pandas was already respectably fast and Polars wipes the floor with it.\nYou can still make Polars slow if you do silly things with it, but compared to Pandas it’s easier to do the right thing in the first place.\nPolars works well with NumPy ufuncs.\nThere are still some situations where Pandas can be faster. They are probably not compelling, but we shouldn’t pretend they don’t exist."
+    "title": "2  BCA",
+    "section": "2.3 Summary",
+    "text": "2.3 Summary\n\nPolars is really fast. Pandas was already respectably fast and Polars wipes the floor with it.\nYou can still make Polars slow if you do silly things with it, but compared to Pandas it’s easier to do the right thing in the first place.\nPolars works well with NumPy ufuncs.\nThere are still some situations where Pandas can be faster. They are probably not compelling, but we shouldn’t pretend they don’t exist.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>BCA</span>"
+    ]
   },
   {
     "objectID": "DPC.html",
     "href": "DPC.html",
     "title": "DPC",
     "section": "",
-    "text": "The Digital Pathway Curation (DPC) pipeline was designed and tested to answer the following questions:\n\nHow can we demonstrate that a molecular biological pathway is related to a disease?\n\nHow can we demonstrate whether a set of molecular biological pathways, calculated beyond the default cutoffs using GSEA, is related to a disease case?\n\nHow can someone query Gemini in a natural language and retrieve reproducible answers without hallucinations?\n\nHow can we quantify AI answers, make inferences, and calculate statistics?\n\nHow can we demonstrate that Gemini delivers reproducible results using a set of systems biology questions?\n\nRegarding the relationship between a set of molecular biological pathways and a disease, we also considered the following questions:\n\nHow can we calculate the accuracy of the answers provided by Gemini, PubMed, and humans?\n\nHow do we uncover FP and FN in a given enriched table?\n\nDPC was written in Python and integrated with the Gemini AI tool and PubMed through their web services. It stores an Ensemble of questions and answers to perform counts, comparisons and statistical analyses.\nIn this study, we defined and measured the concepts of consensus, reproducibility, crowdsourcing, and accuracy. Using a smaller dataset with two disease cases, we calculated crowdsource consensus (CSC) and assessed the accuracy of each of the “3 Sources”: Gemini, PubMed, and human evaluations. Our findings indicate that Gemini’s consensus accuracy outperformed the PubMed and human accuracies. Additionally, using Gemini, we could uncover False Positive (FP) and False Negative (FN) pathways related to each disease case and confirm the True Positive (TP) and True Negative (TN) pathways.\n\n\n\n\n\n\nTip\n\n\n\nDPC aims to\n1. calculate Gemini (LLM) reproducibility\n2. calculate the consensus through the 4DSSQ\n3. merge the “3 Sources” to calcualte the CSC\n4. calculates each source accuracy.\n\n\n\n\n\nA scientific study begins with a central question, and search engines like PubMed are the first tools for retrieving knowledge and understanding the current state of the art. Large Language Models (LLMs) have been used in research, promising acceleration and deeper results. However, besides caution, it demands rigorous validation. Assessing complex biological relationships, like those between molecular pathways and diseases, remains challenging for SQL-based tools and LLM models. Here, we introduce the Digital Pathway Curation (DPC) pipeline to systematically evaluate the reproducibility and accuracy of the Gemini models against PubMed search and human expert curation. Using the COVID-19 proteomic study for different cases and the Medulloblastoma (MB) transcriptomic study for different subtypes, we created a large dataset (Ensemble) based on determining pathway-disease associations. With the Ensemble dataset, we demonstrate that Gemini achieves high run-to-run reproducibility of approximately 99% and inter-model reproducibility of around 75%. Next, we calculate the crowdsourced consensus using a smaller dataset by integrating the “3 Sources”: Gemini, PubMed and human evaluations. The CSC allows us to calculate each accuracy, and the Gemini multi-model consensus reached a significant accuracy of about 87%. Our findings demonstrate that LLMs are reproducible, reliable, and valuable tools for navigating complex biomedical knowledge using a well-formatted natural language query.\n\n\n\nThe scientific method - based on observation, hypothesis generation, feasible and reproducible experimental design, execution, data annotation, data analysis, hypothesis testing, and communication - relies on evidence and reproducibility. Moreover, the literature review is a crucial first step. Since most scientific literature stored in PubMed is published following peer review, one infers that all these articles follow the scientific method and are based on evidence, a statement questioned by some 8–12. Since PubMed is a reproducible SQL-based engine, the responses are identical once queried using the same search terms in a short interval between queries. However, PubMed’s accuracy is not as high as expected, particularly concerning false positives and negatives, which are often overlooked.\nIn the present study, Digital Pathway Curation confirms whether selected pathways are involved in modulating due to a disease. To establish a reproducibility measure, we propose using artificial intelligence, specifically the Gemini LLM models. The first step of our pipeline involves creating a large set of queries, called the Ensemble model. We can assess hard reproducibility by comparing the responses between runs or models. Additionally, we introduce a consensus method, which identifies the most frequently chosen answer among “four different but semantically similar questions” (4DSSQ). Using this consensus, we propose a measure of soft reproducibility, which involves comparing the results from different runs or models based on the consensus results.\nNext, we propose a smaller dataset called “3 Sources” dataset (3SD), based on a list of “two cases of randomly selected pathways” (2CRSP), containing randomly selected pathways for each case. This dataset includes a list of 30 pathways that Gemini, PubMed, and Human respond to related to each disease case or subtype. With 3SD results, we can calculate the crowdsourced consensus score (CSS25) and assess the accuracy of each source.\nThe DPC pipeline evaluates the ability of LLMs to determine whether selected pathways are involved in modulating due to a disease, utilising GSEA results based on the Reactome database. Given an omic study, DPC selects calculated pathways stored in the GSEA pathway table using the “four pathway groups” method. These pathways are then used to perform the Ensemble dataset analyses.\nThe Ensemble dataset comprises the four pathway groups containing tens or hundreds of pathways. It incorporates at least two Gemini models and four distinct semantic forms of questions posed at different times, called runs. This dataset allows for evaluating the run-to-run, inter-model, and semantic reproducibilities. To analyse the semantic reproducibility, we introduced the concept of the “four different and semantically similar questions” (4DSSQ). Additionally, Tiwari et al. from the EMBL-EBI developed a similar approach to test the Reactome database completion using ChatGPT24. We also compared the Ensemble answers with those obtained from PubMed searches.\nThe CSC allows us to assess the accuracy of each source. Using the source with the best accuracy according to the CSC, we can uncover False Positives (FP) and False Negatives (FN) while also confirming True Positives (TP) and True Negatives (TN) among the enriched pathways calculated with GSEA.\nIn the upcoming sections, you will find a detailed description of each method and the results obtained.\n\n\n\nDaniel Alexandre de Souza2, Carlos Eduardo Madureira Trufen5, Victor Wendel da Silva Gonçalves3, Juliana de Paula Bernardes3, Vinícius Miranda Baroni3, Carlos DeOcesano-Pereira1, Leonardo Fontoura Ormundo8, Fabio Augusto Labre de Souza3,4, Olga Celia Martinez Ibañez6, Nancy Starobinas6, Luciano Rodrigo Lopes7, Aparecida Maria Fontes3, Sonia Aparecida de Andrade9, Ana Marisa Chudzinski-Tavassi1,2\n1 - CENTD, Centre of Excellence in New Target Discovery, Butantan Institute, São Paulo, Brazil.\n2 - Laboratory of Development and Innovation, Butantan Institute, São Paulo, SP, Brazil.\n3 - Department of Genetics, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto 14049-900, SP, Brazil\n4- Department of Medical Imaging, Hematology, and Clinical Oncology, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto 14049-900, SP, Brazil\n5 - Immunochemistry Laboratory, Prevor, Liège, Belgium.\n6 - Immunogenetics Laboratory, Butantan Institute, São Paulo, Brazil.\n7 - Department of Health Informatics, UNIFESP, São Paulo, Brazil.\n8 - Medical Investigation Laboratory 60, School of Medicine, University of São Paulo, São Paulo, Brazil.\n9. Escola Superior do Instituto Butantan, Butantan Institute, São Paulo, SP, Brazil.\n\n\n\nArtificial Intelligence, Large Language Model, PubMed search, Google, Gemini, Reproducibility, Accuracy, Curation, Biomedical Pathways, Bioinformatics, Semantic Queries"
+    "text": "Why?\nThe Digital Pathway Curation (DPC) pipeline was designed and tested to answer the following questions:\nRegarding the relationship between a set of molecular biological pathways and a disease, we also considered the following questions:\nDPC was written in Python and integrated with the Gemini AI tool and PubMed through their web services. It stores an Ensemble of questions and answers to perform counts, comparisons and statistical analyses.\nIn this study, we defined and measured the concepts of consensus, reproducibility, crowdsourcing, and accuracy. Using a smaller dataset with two disease cases, we calculated crowdsource consensus (CSC) and assessed the accuracy of each of the “3 Sources”: Gemini, PubMed, and human evaluations. Our findings indicate that Gemini’s consensus accuracy outperformed the PubMed and human accuracies. Additionally, using Gemini, we could uncover False Positive (FP) and False Negative (FN) pathways related to each disease case and confirm the True Positive (TP) and True Negative (TN) pathways.",
+    "crumbs": [
+      "DPC"
+    ]
   },
   {
     "objectID": "DPC.html#why",
     "href": "DPC.html#why",
     "title": "DPC",
     "section": "",
-    "text": "The Digital Pathway Curation (DPC) pipeline was designed and tested to answer the following questions:\n\nHow can we demonstrate that a molecular biological pathway is related to a disease?\n\nHow can we demonstrate whether a set of molecular biological pathways, calculated beyond the default cutoffs using GSEA, is related to a disease case?\n\nHow can someone query Gemini in a natural language and retrieve reproducible answers without hallucinations?\n\nHow can we quantify AI answers, make inferences, and calculate statistics?\n\nHow can we demonstrate that Gemini delivers reproducible results using a set of systems biology questions?\n\nRegarding the relationship between a set of molecular biological pathways and a disease, we also considered the following questions:\n\nHow can we calculate the accuracy of the answers provided by Gemini, PubMed, and humans?\n\nHow do we uncover FP and FN in a given enriched table?\n\nDPC was written in Python and integrated with the Gemini AI tool and PubMed through their web services. It stores an Ensemble of questions and answers to perform counts, comparisons and statistical analyses.\nIn this study, we defined and measured the concepts of consensus, reproducibility, crowdsourcing, and accuracy. Using a smaller dataset with two disease cases, we calculated crowdsource consensus (CSC) and assessed the accuracy of each of the “3 Sources”: Gemini, PubMed, and human evaluations. Our findings indicate that Gemini’s consensus accuracy outperformed the PubMed and human accuracies. Additionally, using Gemini, we could uncover False Positive (FP) and False Negative (FN) pathways related to each disease case and confirm the True Positive (TP) and True Negative (TN) pathways.\n\n\n\n\n\n\nTip\n\n\n\nDPC aims to\n1. calculate Gemini (LLM) reproducibility\n2. calculate the consensus through the 4DSSQ\n3. merge the “3 Sources” to calcualte the CSC\n4. calculates each source accuracy."
+    "text": "How can we demonstrate that a molecular biological pathway is related to a disease?\n\nHow can we demonstrate whether a set of molecular biological pathways, calculated beyond the default cutoffs using GSEA, is related to a disease case?\n\nHow can someone query Gemini in a natural language and retrieve reproducible answers without hallucinations?\n\nHow can we quantify AI answers, make inferences, and calculate statistics?\n\nHow can we demonstrate that Gemini delivers reproducible results using a set of systems biology questions?\n\n\n\nHow can we calculate the accuracy of the answers provided by Gemini, PubMed, and humans?\n\nHow do we uncover FP and FN in a given enriched table?\n\n\n\n\n\n\n\n\n\nTip\n\n\n\nDPC aims to\n1. calculate Gemini (LLM) reproducibility\n2. calculate the consensus through the 4DSSQ\n3. merge the “3 Sources” to calcualte the CSC\n4. calculates each source accuracy.",
+    "crumbs": [
+      "DPC"
+    ]
   },
   {
     "objectID": "DPC.html#abstract",
     "href": "DPC.html#abstract",
     "title": "DPC",
-    "section": "",
-    "text": "A scientific study begins with a central question, and search engines like PubMed are the first tools for retrieving knowledge and understanding the current state of the art. Large Language Models (LLMs) have been used in research, promising acceleration and deeper results. However, besides caution, it demands rigorous validation. Assessing complex biological relationships, like those between molecular pathways and diseases, remains challenging for SQL-based tools and LLM models. Here, we introduce the Digital Pathway Curation (DPC) pipeline to systematically evaluate the reproducibility and accuracy of the Gemini models against PubMed search and human expert curation. Using the COVID-19 proteomic study for different cases and the Medulloblastoma (MB) transcriptomic study for different subtypes, we created a large dataset (Ensemble) based on determining pathway-disease associations. With the Ensemble dataset, we demonstrate that Gemini achieves high run-to-run reproducibility of approximately 99% and inter-model reproducibility of around 75%. Next, we calculate the crowdsourced consensus using a smaller dataset by integrating the “3 Sources”: Gemini, PubMed and human evaluations. The CSC allows us to calculate each accuracy, and the Gemini multi-model consensus reached a significant accuracy of about 87%. Our findings demonstrate that LLMs are reproducible, reliable, and valuable tools for navigating complex biomedical knowledge using a well-formatted natural language query."
+    "section": "Abstract",
+    "text": "Abstract\nA scientific study begins with a central question, and search engines like PubMed are the first tools for retrieving knowledge and understanding the current state of the art. Large Language Models (LLMs) have been used in research, promising acceleration and deeper results. However, besides caution, it demands rigorous validation. Assessing complex biological relationships, like those between molecular pathways and diseases, remains challenging for SQL-based tools and LLM models. Here, we introduce the Digital Pathway Curation (DPC) pipeline to systematically evaluate the reproducibility and accuracy of the Gemini models against PubMed search and human expert curation. Using the COVID-19 proteomic study for different cases and the Medulloblastoma (MB) transcriptomic study for different subtypes, we created a large dataset (Ensemble) based on determining pathway-disease associations. With the Ensemble dataset, we demonstrate that Gemini achieves high run-to-run reproducibility of approximately 99% and inter-model reproducibility of around 75%. Next, we calculate the crowdsourced consensus using a smaller dataset by integrating the “3 Sources”: Gemini, PubMed and human evaluations. The CSC allows us to calculate each accuracy, and the Gemini multi-model consensus reached a significant accuracy of about 87%. Our findings demonstrate that LLMs are reproducible, reliable, and valuable tools for navigating complex biomedical knowledge using a well-formatted natural language query.",
+    "crumbs": [
+      "DPC"
+    ]
   },
   {
     "objectID": "DPC.html#introduction",
     "href": "DPC.html#introduction",
     "title": "DPC",
-    "section": "",
-    "text": "The scientific method - based on observation, hypothesis generation, feasible and reproducible experimental design, execution, data annotation, data analysis, hypothesis testing, and communication - relies on evidence and reproducibility. Moreover, the literature review is a crucial first step. Since most scientific literature stored in PubMed is published following peer review, one infers that all these articles follow the scientific method and are based on evidence, a statement questioned by some 8–12. Since PubMed is a reproducible SQL-based engine, the responses are identical once queried using the same search terms in a short interval between queries. However, PubMed’s accuracy is not as high as expected, particularly concerning false positives and negatives, which are often overlooked.\nIn the present study, Digital Pathway Curation confirms whether selected pathways are involved in modulating due to a disease. To establish a reproducibility measure, we propose using artificial intelligence, specifically the Gemini LLM models. The first step of our pipeline involves creating a large set of queries, called the Ensemble model. We can assess hard reproducibility by comparing the responses between runs or models. Additionally, we introduce a consensus method, which identifies the most frequently chosen answer among “four different but semantically similar questions” (4DSSQ). Using this consensus, we propose a measure of soft reproducibility, which involves comparing the results from different runs or models based on the consensus results.\nNext, we propose a smaller dataset called “3 Sources” dataset (3SD), based on a list of “two cases of randomly selected pathways” (2CRSP), containing randomly selected pathways for each case. This dataset includes a list of 30 pathways that Gemini, PubMed, and Human respond to related to each disease case or subtype. With 3SD results, we can calculate the crowdsourced consensus score (CSS25) and assess the accuracy of each source.\nThe DPC pipeline evaluates the ability of LLMs to determine whether selected pathways are involved in modulating due to a disease, utilising GSEA results based on the Reactome database. Given an omic study, DPC selects calculated pathways stored in the GSEA pathway table using the “four pathway groups” method. These pathways are then used to perform the Ensemble dataset analyses.\nThe Ensemble dataset comprises the four pathway groups containing tens or hundreds of pathways. It incorporates at least two Gemini models and four distinct semantic forms of questions posed at different times, called runs. This dataset allows for evaluating the run-to-run, inter-model, and semantic reproducibilities. To analyse the semantic reproducibility, we introduced the concept of the “four different and semantically similar questions” (4DSSQ). Additionally, Tiwari et al. from the EMBL-EBI developed a similar approach to test the Reactome database completion using ChatGPT24. We also compared the Ensemble answers with those obtained from PubMed searches.\nThe CSC allows us to assess the accuracy of each source. Using the source with the best accuracy according to the CSC, we can uncover False Positives (FP) and False Negatives (FN) while also confirming True Positives (TP) and True Negatives (TN) among the enriched pathways calculated with GSEA.\nIn the upcoming sections, you will find a detailed description of each method and the results obtained."
+    "section": "Introduction",
+    "text": "Introduction\nThe scientific method - based on observation, hypothesis generation, feasible and reproducible experimental design, execution, data annotation, data analysis, hypothesis testing, and communication - relies on evidence and reproducibility. Moreover, the literature review is a crucial first step. Since most scientific literature stored in PubMed is published following peer review, one infers that all these articles follow the scientific method and are based on evidence, a statement questioned by some 8–12. Since PubMed is a reproducible SQL-based engine, the responses are identical once queried using the same search terms in a short interval between queries. However, PubMed’s accuracy is not as high as expected, particularly concerning false positives and negatives, which are often overlooked.\nIn the present study, Digital Pathway Curation confirms whether selected pathways are involved in modulating due to a disease. To establish a reproducibility measure, we propose using artificial intelligence, specifically the Gemini LLM models. The first step of our pipeline involves creating a large set of queries, called the Ensemble model. We can assess hard reproducibility by comparing the responses between runs or models. Additionally, we introduce a consensus method, which identifies the most frequently chosen answer among “four different but semantically similar questions” (4DSSQ). Using this consensus, we propose a measure of soft reproducibility, which involves comparing the results from different runs or models based on the consensus results.\nNext, we propose a smaller dataset called “3 Sources” dataset (3SD), based on a list of “two cases of randomly selected pathways” (2CRSP), containing randomly selected pathways for each case. This dataset includes a list of 30 pathways that Gemini, PubMed, and Human respond to related to each disease case or subtype. With 3SD results, we can calculate the crowdsourced consensus score (CSS25) and assess the accuracy of each source.\nThe DPC pipeline evaluates the ability of LLMs to determine whether selected pathways are involved in modulating due to a disease, utilising GSEA results based on the Reactome database. Given an omic study, DPC selects calculated pathways stored in the GSEA pathway table using the “four pathway groups” method. These pathways are then used to perform the Ensemble dataset analyses.\nThe Ensemble dataset comprises the four pathway groups containing tens or hundreds of pathways. It incorporates at least two Gemini models and four distinct semantic forms of questions posed at different times, called runs. This dataset allows for evaluating the run-to-run, inter-model, and semantic reproducibilities. To analyse the semantic reproducibility, we introduced the concept of the “four different and semantically similar questions” (4DSSQ). Additionally, Tiwari et al. from the EMBL-EBI developed a similar approach to test the Reactome database completion using ChatGPT24. We also compared the Ensemble answers with those obtained from PubMed searches.\nThe CSC allows us to assess the accuracy of each source. Using the source with the best accuracy according to the CSC, we can uncover False Positives (FP) and False Negatives (FN) while also confirming True Positives (TP) and True Negatives (TN) among the enriched pathways calculated with GSEA.\nIn the upcoming sections, you will find a detailed description of each method and the results obtained.",
+    "crumbs": [
+      "DPC"
+    ]
   },
   {
     "objectID": "DPC.html#collaborations",
     "href": "DPC.html#collaborations",
     "title": "DPC",
-    "section": "",
-    "text": "Daniel Alexandre de Souza2, Carlos Eduardo Madureira Trufen5, Victor Wendel da Silva Gonçalves3, Juliana de Paula Bernardes3, Vinícius Miranda Baroni3, Carlos DeOcesano-Pereira1, Leonardo Fontoura Ormundo8, Fabio Augusto Labre de Souza3,4, Olga Celia Martinez Ibañez6, Nancy Starobinas6, Luciano Rodrigo Lopes7, Aparecida Maria Fontes3, Sonia Aparecida de Andrade9, Ana Marisa Chudzinski-Tavassi1,2\n1 - CENTD, Centre of Excellence in New Target Discovery, Butantan Institute, São Paulo, Brazil.\n2 - Laboratory of Development and Innovation, Butantan Institute, São Paulo, SP, Brazil.\n3 - Department of Genetics, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto 14049-900, SP, Brazil\n4- Department of Medical Imaging, Hematology, and Clinical Oncology, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto 14049-900, SP, Brazil\n5 - Immunochemistry Laboratory, Prevor, Liège, Belgium.\n6 - Immunogenetics Laboratory, Butantan Institute, São Paulo, Brazil.\n7 - Department of Health Informatics, UNIFESP, São Paulo, Brazil.\n8 - Medical Investigation Laboratory 60, School of Medicine, University of São Paulo, São Paulo, Brazil.\n9. Escola Superior do Instituto Butantan, Butantan Institute, São Paulo, SP, Brazil."
+    "section": "Collaborations",
+    "text": "Collaborations\nDaniel Alexandre de Souza2, Carlos Eduardo Madureira Trufen5, Victor Wendel da Silva Gonçalves3, Juliana de Paula Bernardes3, Vinícius Miranda Baroni3, Carlos DeOcesano-Pereira1, Leonardo Fontoura Ormundo8, Fabio Augusto Labre de Souza3,4, Olga Celia Martinez Ibañez6, Nancy Starobinas6, Luciano Rodrigo Lopes7, Aparecida Maria Fontes3, Sonia Aparecida de Andrade9, Ana Marisa Chudzinski-Tavassi1,2\n1 - CENTD, Centre of Excellence in New Target Discovery, Butantan Institute, São Paulo, Brazil.\n2 - Laboratory of Development and Innovation, Butantan Institute, São Paulo, SP, Brazil.\n3 - Department of Genetics, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto 14049-900, SP, Brazil\n4- Department of Medical Imaging, Hematology, and Clinical Oncology, Ribeirão Preto Medical School, University of São Paulo, Ribeirão Preto 14049-900, SP, Brazil\n5 - Immunochemistry Laboratory, Prevor, Liège, Belgium.\n6 - Immunogenetics Laboratory, Butantan Institute, São Paulo, Brazil.\n7 - Department of Health Informatics, UNIFESP, São Paulo, Brazil.\n8 - Medical Investigation Laboratory 60, School of Medicine, University of São Paulo, São Paulo, Brazil.\n9. Escola Superior do Instituto Butantan, Butantan Institute, São Paulo, SP, Brazil.",
+    "crumbs": [
+      "DPC"
+    ]
   },
   {
     "objectID": "DPC.html#keywords",
     "href": "DPC.html#keywords",
     "title": "DPC",
-    "section": "",
-    "text": "Artificial Intelligence, Large Language Model, PubMed search, Google, Gemini, Reproducibility, Accuracy, Curation, Biomedical Pathways, Bioinformatics, Semantic Queries"
-  },
-  {
-    "objectID": "concepts.html",
-    "href": "concepts.html",
-    "title": "Concepts",
-    "section": "",
-    "text": "Many people don’t need to be told why method chaining is nice. Many languages make it easy to write thing.min().abs().str() instead of str(abs(min(thing))).\nBut the Python standard library tends to prefer the ugly way, so if you’ve spent a lot of time doing vanilla Python stuff, you may have become accustomed to writing nasty nested function calls or declaring intermediate variables like min_thing. This is sad because a sensible degree of method chaining can make code a lot easier to read.\nIt’s not always easy for libraries to accommodate method chaining - in fancy terms, to be fluent interfaces. Even Pandas used to be much less fluent: when Modern Pandas was released, methods like assign and pipe were quite recent.\nFortunately Polars is very fluent. The expression API provides a very elegant way to do a bunch of stuff to a dataframe in one fell swoop, and Polars mostly doesn’t mutate dataframes in-place (method chaining with side effects is often a bad idea).\nLet’s see how this looks in practice by cleaning up the flight data we gathered in ?@sec-indexing.\n:::\nSome items to note:\n\nOur Pandas function adds columns to a dataframe, while our Polars function simply generates a Polars expression. You’ll find it’s often easier to pass around Exprs than dataframes because:\n\nThey work on both DataFrame and LazyFrame, and they aren’t bound to any particular data.\nPolars performs better if you put everything in one .select or .with_columns call, rather than calling .select multiple times. If you pass around expressions, this pattern is easy.\n\nPolars is fast and convenient for doing the same thing to multiple columns. We can pass a list of columns to pl.col and then call a method on that pl.col as if it were one column. When the expression gets executed it will be parallelized by Polars.\nMeanwhile in Pandas we have to loop through the columns to create a dictionary of kwargs for .assign. This is not parallelized. (We could use .apply with axis=0 instead but this would still take place sequentially and isn’t any easier to read, in my opinion).\nCalling .str.split in Polars creates a column where every element is a list. This kind of data is annoying in Pandas because it’s slow and awkward to work with - notice how the most convenient way to get the first element of a list column in Pandas is to call .str[0], even though this is a list, not a string 🤔\nI’m not sure if that’s even supposed to work. In contrast, Polars actually has first class support for list columns, and they are fast as long as they don’t have mixed types.\n\n\nPolars\n\n\n\n\n\n\n\n\nThe above examples have some fairly long method chains that could perhaps be split up. That said, if I saw them in a PR I probably wouldn’t mind. Here’s a chain that’s too long:\n\nI would argue this code is not hard to follow, but empirically it provokes disgust in people. I think it’s just visually shocking, which is often a hallmark of terrible code. That’s enough reason to avoid doing this. You don’t want folks assuming you’ve lost your mind.\nIn the above example, it would probably be enough to just move those long lists to their own variables. That would make it more obvious that the code is really doing simple, menial things.\n\n\n\n\nMethod chaining is great but use it with care.\nThe Polars code looks pretty good here next to Pandas. It’s less clunky and more conducive to fluent programming. I’ve noticed some people are under the impression that you should only use Polars when you need the performance, but I would argue the above examples show that it’s better for small data too.\nIf you want to translate Pandas code to Polars, pay attention to the examples above and the accompanying notes on the API differences."
-  },
-  {
-    "objectID": "concepts.html#how-much-is-too-much",
-    "href": "concepts.html#how-much-is-too-much",
-    "title": "Concepts",
-    "section": "",
-    "text": "The above examples have some fairly long method chains that could perhaps be split up. That said, if I saw them in a PR I probably wouldn’t mind. Here’s a chain that’s too long:\n\nI would argue this code is not hard to follow, but empirically it provokes disgust in people. I think it’s just visually shocking, which is often a hallmark of terrible code. That’s enough reason to avoid doing this. You don’t want folks assuming you’ve lost your mind.\nIn the above example, it would probably be enough to just move those long lists to their own variables. That would make it more obvious that the code is really doing simple, menial things."
-  },
-  {
-    "objectID": "concepts.html#summary",
-    "href": "concepts.html#summary",
-    "title": "Concepts",
-    "section": "",
-    "text": "Method chaining is great but use it with care.\nThe Polars code looks pretty good here next to Pandas. It’s less clunky and more conducive to fluent programming. I’ve noticed some people are under the impression that you should only use Polars when you need the performance, but I would argue the above examples show that it’s better for small data too.\nIf you want to translate Pandas code to Polars, pay attention to the examples above and the accompanying notes on the API differences."
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "References",
-    "section": "",
-    "text": "References"
+    "section": "Keywords",
+    "text": "Keywords\nArtificial Intelligence, Large Language Model, PubMed search, Google, Gemini, Reproducibility, Accuracy, Curation, Biomedical Pathways, Bioinformatics, Semantic Queries",
+    "crumbs": [
+      "DPC"
+    ]
   },
   {
     "objectID": "pPMod.html",
     "href": "pPMod.html",
-    "title": "pPMod",
+    "title": "10  pPMod",
     "section": "",
-    "text": "pseudo-Pathway modulation (pPMod) is the third module … this chapter we’ll mostly compare Polars to Dask rather than to Pandas. This isn’t an apples-to-apples comparison, because Dask helps scale Pandas but it might help scale Polars too one day. Dask, like Spark, can run on a single node or on a cluster with thousands of nodes.\nPolars doesn’t come with any tooling for running on a cluster, but it does have a streaming mode for larger-than-memory datasets on a single machine. It also uses memory more efficiently than Pandas. These two things mean you can use Polars for much bigger data than Pandas can handle, and hopefully you won’t need tools like Dask or Spark until you’re actually running on a cluster.\n\n\n\n\n\n\nNote\n\n\n\nI use “Dask” here as a shorthand for dask.dataframe. Dask does a bunch of other stuff too.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nThe streaming features of Polars are very new at the time of writing, so approach with caution!\n\n\n\n\nWe’ll be using political donation data from the FEC. Warning: this takes a few minutes.\n:::"
+    "text": "10.1 Get the data\npseudo-Pathway modulation (pPMod) is the third module … this chapter we’ll mostly compare Polars to Dask rather than to Pandas. This isn’t an apples-to-apples comparison, because Dask helps scale Pandas but it might help scale Polars too one day. Dask, like Spark, can run on a single node or on a cluster with thousands of nodes.\nPolars doesn’t come with any tooling for running on a cluster, but it does have a streaming mode for larger-than-memory datasets on a single machine. It also uses memory more efficiently than Pandas. These two things mean you can use Polars for much bigger data than Pandas can handle, and hopefully you won’t need tools like Dask or Spark until you’re actually running on a cluster.\nWe’ll be using political donation data from the FEC. Warning: this takes a few minutes.\n:::",
+    "crumbs": [
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>pPMod</span>"
+    ]
   },
   {
-    "objectID": "pPMod.html#get-the-data",
-    "href": "pPMod.html#get-the-data",
-    "title": "pPMod",
+    "objectID": "molecular_targets.html",
+    "href": "molecular_targets.html",
+    "title": "11  MTP",
     "section": "",
-    "text": "We’ll be using political donation data from the FEC. Warning: this takes a few minutes.\n:::"
+    "text": "11.1 Get the data\nThe Molecular Target Pipeline (MTP)\nAs Dr Wickham notes, this is Codd’s 3rd Normal Form but in statspeak rather than databasespeak.\nThe meaning of “variable” and “observation” depend on what we’re studying, so tidy data is a concept that you mostly learn through experience and ✨vibes✨.\nNow we’ll explore what tidy data looks like for an NBA results dataset.\nYou can play around with the regressions yourself but we’ll end them here.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>MTP</span>"
+    ]
   },
   {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "Introduction",
+    "objectID": "molecular_targets.html#summary",
+    "href": "molecular_targets.html#summary",
+    "title": "11  MTP",
+    "section": "11.2 Summary",
+    "text": "11.2 Summary\nThis was mostly a demonstration of .pivot and .melt, with several different examples of reshaping data in Polars and Pandas.",
+    "crumbs": [
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>MTP</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "12  Summary",
     "section": "",
-    "text": "Introduction\nThis is a book created from markdown and executable code.\nSee @knuth84 for additional discussion of literate programming."
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Summary</span>"
+    ]
   }
 ]
